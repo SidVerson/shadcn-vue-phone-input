@@ -1,74 +1,61 @@
 <template>
     <div>
-        <client-only>
-            <PhoneInput
-                class="flex"
-                country-locale="en-EN"
-                :ignored-countries="['AC']"
-                v-model="phoneNumber"
-                @update="results = $event">
-                <template
-                    #selector="{ inputValue, updateInputValue, countries }">
-                    <Popover>
-                        <PopoverTrigger>
-                            <Button
-                                variant="outline"
-                                class="flex gap-1 rounded-e-none rounded-s-lg px-3">
-                                <FlagComponent :country="inputValue" />
-                                <ChevronsUpDown
-                                    class="-mr-2 h-4 w-4 opacity-50" />
-                            </Button>
-                        </PopoverTrigger>
-                        <PopoverContent class="w-[300px] p-0">
-                            <Command>
-                                <CommandInput placeholder="Search country..." />
-                                <CommandEmpty>No country found.</CommandEmpty>
-                                <CommandList>
-                                    <CommandGroup>
-                                        <CommandItem
-                                            v-for="option in countries"
-                                            :key="option.iso2"
-                                            :value="option.name"
-                                            class="gap-2"
-                                            @select="
-                                                updateInputValue(option.iso2)
-                                            ">
-                                            <FlagComponent
-                                                :country="option?.iso2" />
-                                            <span class="flex-1 text-sm">{{
-                                                option.name
-                                            }}</span>
-                                            <span
-                                                class="text-foreground/50 text-sm"
-                                                >{{ option.dialCode }}</span
-                                            >
-                                        </CommandItem>
-                                    </CommandGroup>
-                                </CommandList>
-                            </Command>
-                        </PopoverContent>
-                    </Popover>
-                </template>
-
-                <template
-                    #input="{ inputValue, updateInputValue, placeholder }">
-                    <Input
-                        class="rounded-e-lg rounded-s-none"
-                        type="text"
-                        :model-value="inputValue"
-                        @input="updateInputValue"
-                        :placeholder="placeholder" />
-                </template>
-            </PhoneInput>
-
-            {{ phoneNumber }}
-        </client-only>
+        <ClientOnly>
+            <div className="container flex max-w-5xl justify-between py-40">
+                <ModeToggle />
+                <main
+                    className="flex min-h-screen w-full flex-col items-center justify-between scroll-smooth">
+                    <Hero />
+                    <Setup
+                        :code="`npx shadcn-ui@latest add input\nnpx shadcn-ui@latest add button\nnpx shadcn-ui@latest add command\nnpx shadcn-ui@latest add toast\nnpx shadcn-ui@latest add popover\nnpx shadcn-ui@latest add scroll-area`" />
+                    <Variants />
+                </main>
+                <aside className="ml-20 hidden text-sm xl:block">
+                    <div className="sticky top-10 text-sm">
+                        <h3 className="mb-6 whitespace-nowrap font-medium">
+                            On this page
+                        </h3>
+                        <ul className="flex flex-col gap-2">
+                            <li>
+                                <a
+                                    href="#setup"
+                                    className="font-light text-muted-foreground">
+                                    Setup
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#variants"
+                                    className="font-light text-muted-foreground">
+                                    Variants
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+            <footer className="border-t py-6 md:px-8 md:py-0">
+                <div
+                    className="container flex max-w-5xl flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
+                    <p
+                        className="text-center text-sm leading-loose text-muted-foreground md:text-left">
+                        Built by{" "}
+                        <a
+                            href="{siteConfig.links.twitter}"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="font-medium underline underline-offset-4">
+                            Omer Alpi
+                        </a>
+                        .
+                    </p>
+                </div>
+            </footer>
+        </ClientOnly>
     </div>
 </template>
 
 <script lang="ts" setup>
-import PhoneInput from 'base-vue-phone-input'
-import { ChevronsUpDown } from 'lucide-vue-next'
 const phoneNumber = ref('')
 const results = ref()
 </script>
