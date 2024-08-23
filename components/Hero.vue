@@ -4,7 +4,7 @@
         <div
             className="z-10 flex w-full flex-col items-center gap-5 text-center">
             <h1 className="scroll-m-20 text-4xl font-bold tracking-tight">
-                Shadc Vue Phone Input
+                Shadcn Vue Phone Input
             </h1>
             <p className="max-w-[450px] text-muted-foreground">
                 An implementation of a Phone Input component built on top of

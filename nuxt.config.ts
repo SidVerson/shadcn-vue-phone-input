@@ -24,10 +24,11 @@ export default defineNuxtConfig({
         classSuffix: '',
     },
     site: {
-        url: 'https://example.com',
+        url: 'https://shadcn-vue-phone-input.vercel.app/',
         name: 'Shadcn Vue Phone Input',
-        description: 'An implementation of a Phone Input component built on top of Shadcn UI input component.',
+        description:
+            'An implementation of a Phone Input component built on top of Shadcn UI input component.',
         defaultLocale: 'en', // not needed if you have @nuxtjs/i18n installed
     },
-    ssr: false
+    ssr: false,
 })
