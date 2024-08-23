@@ -12,14 +12,19 @@
             </p>
             <div className="mt-1 flex gap-2">
                 <Button
+                    as-child
                     size="lg"
                     class="min-w-[150px] shadow-sm">
                     <a href="#setup"> Try it out </a>
                 </Button>
                 <Button
+                    as-child
                     size="lg"
                     variant="secondary">
-                    <a href=""> Github </a>
+                    <a
+                        href="https://github.com/SidVerson/shadcn-vue-phone-input.git">
+                        Github
+                    </a>
                 </Button>
             </div>
         </div>

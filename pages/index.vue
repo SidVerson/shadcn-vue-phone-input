@@ -1,6 +1,5 @@
 <template>
     <div>
-        <ClientOnly>
             <div className="container flex max-w-5xl justify-between py-40">
                 <ModeToggle />
                 <main
@@ -39,19 +38,25 @@
                     className="container flex max-w-5xl flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
                     <p
                         className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-                        Built by{" "}
+                        Built by
                         <a
-                            href="{siteConfig.links.twitter}"
+                            href="https://www.linkedin.com/in/владислав-сидорик-93730b255"
                             target="_blank"
                             rel="noreferrer"
                             className="font-medium underline underline-offset-4">
-                            Omer Alpi
+                            Sidoryk Vladislav.
                         </a>
-                        .
+                        Deeply inspired by Omers Alpi
+                        <a
+                            href="https://shadcn-phone-input.vercel.app/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="font-medium underline underline-offset-4">
+                            Shadcn Phone Input
+                        </a>
                     </p>
                 </div>
             </footer>
-        </ClientOnly>
     </div>
 </template>
 

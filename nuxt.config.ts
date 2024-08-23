@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: { enabled: true },
-    modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', '@nuxtjs/color-mode','@formkit/auto-animate/nuxt'],
+    modules: [
+        '@nuxtjs/tailwindcss',
+        'shadcn-nuxt',
+        '@nuxtjs/color-mode',
+        '@formkit/auto-animate/nuxt',
+        '@nuxtjs/seo',
+    ],
     shadcn: {
         /**
          * Prefix for all the imported component
@@ -17,4 +23,11 @@ export default defineNuxtConfig({
     colorMode: {
         classSuffix: '',
     },
+    site: {
+        url: 'https://example.com',
+        name: 'Shadcn Vue Phone Input',
+        description: 'An implementation of a Phone Input component built on top of Shadcn UI input component.',
+        defaultLocale: 'en', // not needed if you have @nuxtjs/i18n installed
+    },
+    ssr: false
 })
