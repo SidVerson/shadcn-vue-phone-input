@@ -1,16 +1,16 @@
 <template>
     <section
-        className="z-10 flex w-full max-w-5xl flex-col items-center gap-5 text-center">
+        class="z-10 flex w-full max-w-5xl flex-col items-center gap-5 text-center">
         <div
-            className="z-10 flex w-full flex-col items-center gap-5 text-center">
-            <h1 className="scroll-m-20 text-4xl font-bold tracking-tight">
+            class="z-10 flex w-full flex-col items-center gap-5 text-center">
+            <h1 class="scroll-m-20 text-4xl font-bold tracking-tight">
                 Shadcn Vue Phone Input
             </h1>
-            <p className="max-w-[450px] text-muted-foreground">
+            <p class="max-w-[450px] text-muted-foreground">
                 An implementation of a Phone Input component built on top of
                 Shadcn UI&apos;s input component.
             </p>
-            <div className="mt-1 flex gap-2">
+            <div class="mt-1 flex gap-2">
                 <Button
                     as-child
                     size="lg"
@@ -31,11 +31,11 @@
 
         <div
             id="try"
-            className="w-full py-8">
+            class="w-full py-8">
             <div
-                className="relative my-4 flex w-full flex-col space-y-2 justify-center">
+                class="relative my-4 flex w-full flex-col space-y-2 justify-center">
                 <div
-                    className="preview relative mt-2 flex min-h-[350px] w-full items-center justify-center rounded-md border p-10 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                    class="preview relative mt-2 flex min-h-[350px] w-full items-center justify-center rounded-md border p-10 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
                     <form
                         @submit="onSubmit"
                         class="flex flex-col items-start space-y-8 justify-center">
