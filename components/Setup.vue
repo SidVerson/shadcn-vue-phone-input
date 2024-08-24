@@ -68,41 +68,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { Copy, Check, Phone } from 'lucide-vue-next'
 import {
     PhoneInputSnippet,
     FlagComponentSnippet,
 } from '../content/snippets/phone-input'
-
-// Props
-const props = defineProps({
-    code: {
-        type: String,
-        required: true,
-    },
-})
-
-// State to track if the code was copied
-const copied = ref(false)
-
-// Copy function
-const copyCode = async () => {
-    try {
-        await navigator.clipboard.writeText(props.code)
-        copied.value = true
-
-        // Reset the copied state after 2 seconds
-        setTimeout(() => {
-            copied.value = false
-        }, 2000)
-    } catch (err) {
-        console.error('Failed to copy text: ', err)
-    }
-}
 </script>
-
-<style scoped>
-/* Add your additional styles here */
-/* Optional: Smooth opacity transitions */
-</style>
