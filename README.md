@@ -6,8 +6,8 @@ design principles.
 ## Why
 
 I needed a phone input component for a project. I looked around for any phone
-input components that used Shadcn's design system, but I fond only [Shadcn Phone Input](https://shadcn-phone-input.vercel.app/). So,
-I decided to this for vue myself, granted access from creator, created [base-vue-phone-input](https://www.npmjs.com/package/base-vue-phone-input?activeTab=readme) for customizable vue phone inputs. Hope you find it useful!
+input components that used Shadcn's design system, but I found only [Shadcn Phone Input](https://shadcn-phone-input.vercel.app/). So,
+I decided to do this for vue myself, granted access from creator, created [base-vue-phone-input](https://www.npmjs.com/package/base-vue-phone-input?activeTab=readme) for customizable vue phone inputs. Hope you find it useful!
 
 ## Usage
 
